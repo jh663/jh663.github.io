@@ -29,7 +29,7 @@
         <a id="intro">非同凡想 - 老師的話</a>
 
         <a id="txt">
-            正在加载。。。
+            正在加載。。。
         </a>
     </div>
     <div id="image">
@@ -38,7 +38,7 @@
             <h2 id="mes"></h2>
         </div>
     </div>
-    <a id="audio" onClick="togglePlay()">🔇</a>
+    
 </body>
 <style>
     html body {
@@ -47,14 +47,6 @@
         font-family: 'Kosugi Maru', sans-serif;
     }
 
-    #audio {
-        position: absolute;
-        top: 80%;
-        left: 80%;
-        color: red;
-        cursor: pointer;
-        font-size: 6vh;
-    }
 
     #loading {
         font-size: 5vw;
@@ -132,19 +124,7 @@
     }
 </style>
 <script>
-    var myAudio = new Audio("/assets/audio/bg1.mp3");
-    var isPlaying = false;
 
-    function togglePlay() {
-        isPlaying ? myAudio.pause() : myAudio.play();
-    };
-
-    myAudio.onplaying = function () {
-        isPlaying = true;
-    };
-    myAudio.onpause = function () {
-        isPlaying = false;
-    };
 
     window.addEventListener('load', function () {
         document.getElementById('txt').text = "點擊開始 Click to Begin";
