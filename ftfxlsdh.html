@@ -126,7 +126,19 @@
     }
 </style>
 <script>
+    var myAudio = new Audio("/assets/audio/bg1.mp3");
+    var isPlaying = false;
 
+    function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+    };
+
+    myAudio.onplaying = function () {
+        isPlaying = false;
+    };
+    myAudio.onpause = function () {
+        isPlaying = false;
+    };
 
     window.addEventListener('load', function () {
         document.getElementById('txt').text = "點擊開始 Click to Begin";
