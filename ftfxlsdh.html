@@ -237,7 +237,6 @@
         '我們剛求道的時候，感覺道很好，發愿要渡很多人，要讓大家都能夠回天，這個就是初發心，初發心不改變就能夠成佛。'
     ]
 
-    const wishes = ['虎虎生威', '如虎添翼', '虎年吉祥']
 
     random = document.cookie.split("cny22=")[1];
     if (isNaN(random)) {
@@ -245,7 +244,6 @@
         document.cookie = "cny22=" + random;
     }
     document.getElementById("mes").innerHTML = text[Math.floor(random * text.length)]
-    document.getElementById("wishes").innerHTML = wishes[Math.floor(Math.random() * wishes.length)]
 </script>
 
 </html>
